@@ -31,6 +31,7 @@ app.use(
       httpOnly: true,
       secure: true,
       sameSite: "none",
+      domain: "markdownfrontend.netlify.app",
       // maxAge, etc, as needed
     },
   })
