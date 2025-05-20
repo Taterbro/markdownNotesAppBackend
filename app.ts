@@ -18,7 +18,10 @@ const app = express();
 //middleware
 app.use(morgan("dev"));
 app.use(
-  cors({ origin: ["https://markdownfrontend.netlify.app"], credentials: true })
+  cors({
+    origin: ["https://markdownfrontend.netlify.app", "http://localhost:8081"],
+    credentials: true,
+  })
 );
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
