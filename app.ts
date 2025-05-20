@@ -16,6 +16,7 @@ declare module "express-session" {
 
 const app = express();
 //middleware
+app.set("trust proxy", 1);
 app.use(morgan("dev"));
 app.use(
   cors({
